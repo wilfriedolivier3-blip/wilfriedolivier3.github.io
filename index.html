@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wilfried_Dev | Portfolio</title>
+  <meta name="description" content="Portfolio de Beda Kouassi Wilfried Olivier, développeur d'applications." />
+
+  <!-- Polices Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Icônes Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Feuille de style -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==================================================
+       EN-TÊTE / MENU
+       Astuce 100% CSS : la case à cocher invisible
+       "menu-toggle" ouvre et ferme le menu sur mobile.
+       ================================================== -->
+  <header class="header">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+    <a href="#accueil" class="logo">WILFRIED<span>_DEV</span></a>
+
+    <nav class="nav">
+      <a href="#accueil">Accueil</a>
+      <a href="#apropos">À propos</a>
+      <a href="#competences">Compétences</a>
+      <a href="#services">Services</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#contact" class="btn-nav">Contactez-moi</a>
+    </nav>
+
+    <label for="menu-toggle" class="menu-btn" aria-label="Ouvrir ou fermer le menu">
+      <i class="fa-solid fa-bars icone-ouvrir"></i>
+      <i class="fa-solid fa-xmark icone-fermer"></i>
+    </label>
+  </header>
+
+  <!-- ========== ACCUEIL ========== -->
+  <section class="hero" id="accueil">
+    <div class="hero-text">
+      <p class="hello">Salut, je suis</p>
+      <h1>Beda Kouassi <span>Wilfried</span></h1>
+
+      <!-- Mots qui défilent (100% CSS).
+           Pour changer un mot : modifiez le texte entre les balises.
+           Le 1er mot est répété à la fin pour un défilement fluide. -->
+      <h2>Je suis
+        <span class="mots">
+          <span class="mots-liste">
+            <span>développeur web</span>
+            <span>designer graphique</span>
+            <span>passionné du numérique</span>
+            <span>développeur web</span>
+          </span>
+        </span>
+      </h2>
+
+      <div class="socials">
+        <!-- Suivi : chaque clic sur un lien de contact est enregistré (canal = email / whatsapp) -->
+        <a href="mailto:wilfriedolivier3@gmail.com" aria-label="Email" onclick="try{(window.__lovableEvents||window.top.__lovableEvents)?.track?.('project.contact_link_clicked',{canal:'email'})}catch(e){}"><i class="fa-solid fa-envelope"></i></a>
+        <!-- Remplacez # par votre lien GitHub -->
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <!-- Remplacez # par votre lien LinkedIn -->
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://wa.me/2250102404174" aria-label="WhatsApp" onclick="try{(window.__lovableEvents||window.top.__lovableEvents)?.track?.('project.contact_link_clicked',{canal:'whatsapp'})}catch(e){}"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+
+      <!-- Suivi : chaque téléchargement du CV est enregistré -->
+      <a href="CV_wilfried_beda.pdf" download class="btn" onclick="try{(window.__lovableEvents||window.top.__lovableEvents)?.track?.('project.cv_downloaded')}catch(e){}">
+        <i class="fa-solid fa-download"></i> Télécharger mon CV
+      </a>
+    </div>
+
+    <div class="hero-photo">
+      <img src="images/photo.png" alt="Photo de Wilfried" />
+    </div>
+  </section>
+
+  <!-- ========== À PROPOS ========== -->
+  <section class="section" id="apropos">
+    <h2 class="title">À <span>propos</span></h2>
+    <div class="about reveal">
+      <p>
+        Titulaire d'un <strong>BTS en Informatique, spécialité Développement d'Applications</strong>,
+        je suis à la recherche d'un stage de validation pour consolider mes acquis et découvrir
+        les réalités du terrain.
+      </p>
+      <p>
+        Curieux, rigoureux et passionné par le développement web, je m'investis pleinement dans
+        chaque projet avec sens du détail, esprit d'équipe et volonté d'apprendre.
+      </p>
+      <div class="stats">
+        <div><strong>BTS</strong><span>Dév. d'applications</span></div>
+        <div><strong>3+</strong><span>Ans d'expérience pro</span></div>
+        <div><strong>2</strong><span>Langues parlées</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COMPÉTENCES ========== -->
+  <!-- Pour modifier un niveau : changez la valeur de --niveau (0 à 100)
+       ET le pourcentage affiché à côté du nom. -->
+  <section class="section" id="competences">
+    <h2 class="title">Mes <span>compétences</span></h2>
+    <div class="skills reveal">
+      <!-- Pour changer un logo : remplacez l'image dans images/logos/ -->
+      <div class="skill" style="--niveau: 90">
+        <p><b><img class="logo-skill" src="images/logos/HTML.png" alt="HTML" /><img class="logo-skill" src="images/logos/CSS.png" alt="CSS" /> HTML / CSS</b><span class="niveau">90%</span></p>
+        <div class="bar"><span></span></div>
+      </div>
+      <div class="skill" style="--niveau: 50">
+        <p><b><img class="logo-skill" src="images/logos/PHP.png" alt="PHP" /> PHP</b><span class="niveau">50%</span></p>
+        <div class="bar"><span></span></div>
+      </div>
+      <div class="skill" style="--niveau: 60">
+        <p><b><img class="logo-skill" src="images/logos/MY_SQL.png" alt="MySQL" /> MySQL</b><span class="niveau">60%</span></p>
+        <div class="bar"><span></span></div>
+      </div>
+      <div class="skill" style="--niveau: 50">
+        <p><b><img class="logo-skill" src="images/logos/my_pascal.jpg" alt="Pascal" /> Pascal</b><span class="niveau">50%</span></p>
+        <div class="bar"><span></span></div>
+      </div>
+      <div class="skill" style="--niveau: 90">
+        <p><b><img class="logo-skill" src="images/logos/CANVA.jpg" alt="Canva" /> Canva</b><span class="niveau">90%</span></p>
+        <div class="bar"><span></span></div>
+      </div>
+      <div class="skill" style="--niveau: 40">
+        <p><b><img class="logo-skill" src="images/logos/PHOTOSHOP.jpg" alt="Photoshop" /> Photoshop</b><span class="niveau">40%</span></p>
+        <div class="bar"><span></span></div>
+      </div>
+      <div class="skill" style="--niveau: 60">
+        <p><b><img class="logo-skill" src="images/logos/WORD.jpg" alt="Word" /> Word</b><span class="niveau">60%</span></p>
+        <div class="bar"><span></span></div>
+      </div>
+      <div class="skill" style="--niveau: 70">
+        <p><b><img class="logo-skill" src="images/logos/EXCEL.jpg" alt="Excel" /> Excel</b><span class="niveau">70%</span></p>
+        <div class="bar"><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="section" id="services">
+    <h2 class="title">Mes <span>services</span></h2>
+    <div class="cards reveal">
+      <div class="card">
+        <i class="fa-solid fa-code"></i>
+        <h3>Développement web</h3>
+        <p>Création de sites web modernes, rapides et adaptés aux mobiles.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-database"></i>
+        <h3>Bases de données</h3>
+        <p>Conception et gestion de bases de données avec PHP et MySQL.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-palette"></i>
+        <h3>Design graphique</h3>
+        <p>Affiches publicitaires, CV personnalisés et cartes de visite (Canva, Photoshop).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PARCOURS ========== -->
+  <section class="section" id="parcours">
+    <h2 class="title">Mon <span>parcours</span></h2>
+    <div class="timeline reveal">
+      <div class="item">
+        <span class="date">2026</span>
+        <h3>BTS Informatique – Groupe LOKO</h3>
+        <p>Développement d'Applications</p>
+      </div>
+      <div class="item">
+        <span class="date">2022 – 2023</span>
+        <h3>Baccalauréat série D</h3>
+        <p>Collège Seul Dieu Béni de Yakassé Attobrou</p>
+      </div>
+      <div class="item">
+        <span class="date">2018 – 2020</span>
+        <h3>Rayonniste – King Cash, Danané</h3>
+        <p>Mise en rayon et organisation des produits</p>
+      </div>
+      <div class="item">
+        <span class="date">2017 – 2019</span>
+        <h3>Agent commercial – Moov CI, Séguéla</h3>
+        <p>Participation aux opérations commerciales</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section" id="contact">
+    <h2 class="title">Contactez-<span>moi</span></h2>
+    <div class="contact reveal">
+      <div class="infos">
+        <p><i class="fa-solid fa-phone"></i> +225 01 02 40 41 74</p>
+        <p><i class="fa-solid fa-phone"></i> +225 07 67 67 04 57</p>
+        <p><i class="fa-solid fa-envelope"></i> wilfriedolivier3@gmail.com</p>
+        <p><i class="fa-solid fa-location-dot"></i> Cocody Angré 8ème tranche</p>
+      </div>
+
+      <!-- Formulaire 100% HTML : la validation se fait grâce aux attributs
+           required / minlength / type="email", et la mise en couleur en CSS.
+           L'envoi ouvre la messagerie du visiteur avec le message prêt. -->
+      <form class="form" action="mailto:wilfriedolivier3@gmail.com" method="post" enctype="text/plain">
+        <div class="champ">
+          <label for="nom">Votre nom</label>
+          <input type="text" id="nom" name="nom" placeholder="Ex. Konan Aya" autocomplete="name" required minlength="2" maxlength="60" />
+        </div>
+
+        <div class="champ">
+          <label for="email">Votre email</label>
+          <input type="email" id="email" name="email" placeholder="vous@exemple.com" autocomplete="email" required />
+        </div>
+
+        <div class="champ">
+          <label for="message">Votre message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet ou votre demande..." required minlength="10" maxlength="500"></textarea>
+        </div>
+
+        <button type="submit" class="btn"><i class="fa-solid fa-paper-plane"></i> Envoyer</button>
+        <p class="note-form">L'envoi ouvre votre messagerie avec le message déjà rempli.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== PIED DE PAGE ========== -->
+  <footer class="footer">
+    <p>© 2026 Wilfried_Dev — Tous droits réservés</p>
+  </footer>
+
+</body>
+</html>
